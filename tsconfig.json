@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "removeComments": true,
+
+    //module resolution
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*": ["shared/*"]
+    },
+
+    // strict checks
+    "strict": true,
+    "allowUnreachableCode": false,
+    "skipLibCheck": true,
+
+    // styling
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [],
+  "exclude": ["node_modules", "dist"],
+  "references": [{ "path": "client" }, { "path": "server" }]
+}
