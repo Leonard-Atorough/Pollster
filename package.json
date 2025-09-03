@@ -14,10 +14,10 @@
   "scripts": {
     "dev:client": "npm run dev --workspace client",
     "dev:server": "npm run dev --workspace server",
-    "dev": "concurrently \"npm dev:client\" \"npm dev:server\"",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
     "build:client": "npm run build --workspace client",
     "build:server": "npm run build --workspace server",
-    "build": "npm build:client && npm build:server"
+    "build": "npm run build:client && npm run build:server"
   },
   "keywords": [],
   "license": "ISC",
