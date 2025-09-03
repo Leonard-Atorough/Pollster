@@ -6,7 +6,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
-    setupFiles:["./client/src/vitest.setup.ts"],
+    setupFiles: ["./client/src/vitest.setup.ts"],
     coverage: {
       provider: "v8",
       reporter: ["text", "json", "html"],
@@ -15,7 +15,6 @@ export default defineConfig({
         "**test/**",
         "**src/mocks/**",
         "**src/types/**",
-        "**src/index.tsx",
         "**src/main.tsx",
         "**src/vitest.config.ts",
       ],

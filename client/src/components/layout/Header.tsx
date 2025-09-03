@@ -4,12 +4,11 @@ import styles from "./Layout.module.css";
 export function Header() {
   return (
     <header role="banner" className={styles.header}>
-      <h1>Pollster</h1>
+      <h1>
+        <Link to="/">Pollster</Link>
+      </h1>
       <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
+        <ul className={styles.navList}>
           <li>
             <Link to="/create">Create Poll</Link>
           </li>
