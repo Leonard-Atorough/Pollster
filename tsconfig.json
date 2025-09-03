@@ -3,6 +3,7 @@
     "target": "es6",
     "module": "esnext",
     "removeComments": true,
+    "types": ["vitest/globals", "node"],
 
     //module resolution
     "moduleResolution": "node",
@@ -20,7 +21,7 @@
     // styling
     "forceConsistentCasingInFileNames": true
   },
-  "include": [],
+  "include": ["client", "server", "shared"],
   "exclude": ["node_modules", "dist"],
   "references": [{ "path": "client" }, { "path": "server" }]
 }

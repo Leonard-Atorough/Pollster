@@ -17,13 +17,20 @@
     "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
     "build:client": "npm run build --workspace client",
     "build:server": "npm run build --workspace server",
-    "build": "npm run build:client && npm run build:server"
+    "build": "npm run build:client && npm run build:server",
+    "test:client": "npm run test --workspace client",
+    "test:server": "npm run test --workspace server",
+    "test": "concurrently \"npm run test:client\" \"npm run test:server\""
   },
   "keywords": [],
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "concurrently": "^9.2.1",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
   }
 }

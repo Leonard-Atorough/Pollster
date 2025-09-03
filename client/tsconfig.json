@@ -4,6 +4,8 @@
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
     "composite": true,
     "paths": {
       "@/*": ["src/*"],
