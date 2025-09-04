@@ -15,6 +15,10 @@ describe("PollCard", () => {
     RenderWithRoutes(<PollCard poll={testPoll} />);
     screen.debug();
     expect(screen.getByText(testPoll.title)).toBeInTheDocument();
+    expect(screen.getByRole("link")).toHaveAttribute(
+      "href",
+      `/poll/${testPoll.id}`
+    );
     // expect(screen.getByText(testPoll.description)).toBeInTheDocument();
     expect(screen.getByText(testPoll.votes)).toBeInTheDocument();
   });
