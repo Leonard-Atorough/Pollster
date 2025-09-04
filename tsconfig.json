@@ -3,14 +3,16 @@
     "target": "es6",
     "module": "esnext",
     "removeComments": true,
-    "types": ["vitest/globals", "node"],
+    "types": ["vitest/globals", "node", "@testing-library/jest-dom"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
 
     //module resolution
     "moduleResolution": "node",
     "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
-      "@shared/*": ["shared/*"]
+      "@shared/*": ["shared/src/*"]
     },
 
     // strict checks
@@ -21,7 +23,11 @@
     // styling
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["client", "server", "shared"],
+  "include": ["client", "server", "shared", "__mocks__", "vitest.setup.ts"],
   "exclude": ["node_modules", "dist"],
-  "references": [{ "path": "./client" }, { "path": "./server" }]
+  "references": [
+    { "path": "./client" },
+    // { "path": "./server" },
+    { "path": "./shared" }
+  ]
 }
