@@ -23,11 +23,17 @@
     // styling
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["client", "server", "shared", "__mocks__", "client/vitest.setup.ts"],
+  "include": [
+    "client",
+    "server",
+    "shared",
+    "__mocks__",
+    "client/vitest.setup.ts"
+  ],
   "exclude": ["node_modules", "dist"],
   "references": [
     { "path": "./client" },
-    // { "path": "./server" },
+    { "path": "./server" },
     { "path": "./shared" }
   ]
 }
