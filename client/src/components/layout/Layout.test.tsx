@@ -12,7 +12,7 @@ describe("Layout", () => {
     RenderWithRoutes(<Layout />);
     screen.debug();
     expect(screen.getByRole("banner")).toBeInTheDocument();
-    // expect(screen.getByTestId("outlet")).toBeInTheDocument();
-    // expect(screen.getByRole("contentinfo")).toBeInTheDocument();
+    expect(screen.getByTestId("outlet")).toBeInTheDocument();
+    expect(screen.getByRole("contentinfo")).toBeInTheDocument();
   });
 });

@@ -5,7 +5,8 @@ export default defineConfig({
   plugins: [tsconfigPaths()],
   test: {
     globals: true,
-    environment: "node",
+    environment: "jsdom",
+    setupFiles: ["./vitest.setup.ts"],
     coverage: {
       provider: "v8",
       reporter: ["text", "json", "html"],
@@ -15,8 +16,8 @@ export default defineConfig({
         "**src/mocks/**",
         "**src/types/**",
         "**src/main.tsx",
+        "**src/vitest.config.ts",
       ],
     },
-    projects: ["./client", "./server"],
   },
 });
