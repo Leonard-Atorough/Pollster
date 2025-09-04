@@ -13,7 +13,7 @@ const testPoll: PollCardType = {
 describe("PollCard", () => {
   it("passes the props correctly when the element is rendered", () => {
     RenderWithRoutes(<PollCard poll={testPoll} />);
-    screen.debug();
+    // screen.debug();
     expect(screen.getByText(testPoll.title)).toBeInTheDocument();
     expect(screen.getByRole("link")).toHaveAttribute(
       "href",
