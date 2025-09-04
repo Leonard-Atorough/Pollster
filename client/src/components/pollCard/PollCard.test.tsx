@@ -1,8 +1,9 @@
 import type { PollCard as PollCardType } from "@shared/types";
 import { PollCard } from "./PollCard";
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
+import { RenderWithRoutes } from "@/test/RenderWithRoutes";
 
-const testpoll: PollCardType = {
+const testPoll: PollCardType = {
   id: "1",
   title: "Test Poll",
   description: "A test poll",
@@ -11,8 +12,10 @@ const testpoll: PollCardType = {
 
 describe("PollCard", () => {
   it("passes the props correctly when the element is rendered", () => {
-    render(<PollCard poll={testpoll} />);
-
-    expect(screen.getByText(testpoll.title)).toBeInTheDocument();
+    RenderWithRoutes(<PollCard poll={testPoll} />);
+    screen.debug();
+    expect(screen.getByText(testPoll.title)).toBeInTheDocument();
+    // expect(screen.getByText(testPoll.description)).toBeInTheDocument();
+    expect(screen.getByText(testPoll.votes)).toBeInTheDocument();
   });
 });
